@@ -1,0 +1,24 @@
+/*Home*/
+.error404{
+    background-color: #212326;
+    color:#fff;
+    .error-code{
+        display: block;
+        font-size: 150px;
+        line-height: 150px;
+        color: #fff;
+        margin-bottom: 20px;
+        text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-primary{
+        background-color: $primary-color;
+        border-color: $primary-color;
+        &:hover{
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
+}
+@media screen and (min-width:768px) {
+
+}

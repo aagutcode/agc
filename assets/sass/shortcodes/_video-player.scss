@@ -1,0 +1,42 @@
+
+.agc-video-player{
+    .video-container{
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.6%;
+        position: relative;
+        video, iframe{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:before{
+            content: '\e906';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 9;
+            color: #fff;
+            font-size: 2rem;
+            font-family: 'icomoon';
+            translate: -50% -50%;
+            background: #00d1fe;
+            line-height: 1;
+            border-radius: 1rem;
+            width: 5rem;
+            height: 4rem;
+            display: inline-flex;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        &.playing{
+            &:before{
+                opacity: 0;
+            }
+        }
+    }
+}

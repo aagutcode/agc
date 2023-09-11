@@ -1,0 +1,202 @@
+.single{
+    .back-link {
+        margin: 2rem 0;
+        display: inline-block;
+        letter-spacing: .25rem;
+        font-size: .75rem;
+        i{
+            font-size:1.5rem;
+            font-family: 'myriad pro';
+            vertical-align: middle;
+        }
+    }
+    .post-title{
+        font-family: 'Italiana';
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 0 1rem;
+        text-transform: lowercase;
+    }
+    .post-categories{
+        margin-bottom: 2.5rem;
+        a{
+            color: #e93f60;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+    }
+    &-post{
+        main{
+            padding:70px 0;
+        }
+        .post-thumbnail img{
+            width: 100%;
+        }
+        .post-thumb-caption{
+            font-size: .7rem;
+            text-transform: uppercase;
+            margin:1rem 0 2rem;
+        }
+        .post-content{
+            text-align: justify;
+            .images{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 2rem 0;
+                img{
+                    width: 48.5%;
+                    display: inline-block;
+                    margin: 0;
+                }
+            }
+            a{
+                color: #e93f60;
+            }
+            h2{
+                font-size: 2rem;
+                margin-top:5rem;
+            }
+            blockquote{
+                position: relative;
+                margin:3rem 0 3rem 12rem;
+                padding:1px 3.5rem;
+                border-left: 1px solid #000;
+                &:before{
+                    content:"";
+                    position: absolute;
+                    right:calc(100% + 3.5rem);
+                    width: 8.5rem;
+                    height: 100%;
+                    background: url('../../img/SVG/quotes.svg') center center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    } 
+    &-artist{
+        &:not(.nav-is-open){
+            header{
+                border-color: #fff;
+                .logo{
+                    border-color: #fff;
+                }
+                .menu{
+                    border-color: #fff;
+                    .menu-button .line{
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+        &.nav-is-open{
+            .logo{
+                a{
+                    transition-delay: 1s;
+                    background-color: #fff;
+                    img{
+                        transition-delay: 1s;
+                        mix-blend-mode: difference;
+                    }
+                }
+            }
+        }
+        .header{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+        }
+        #hero{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            padding-top: 70px;
+            .back-link{
+                color:#fff;
+            }
+            .mobile{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex:1;
+                img{
+                    min-width: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    display: none;
+                    &:nth-child(1){
+                        display: block;
+                    }
+                }
+            }
+            .artist-info{
+                position: absolute;
+                bottom:0;
+                left: 0;
+                width: 100%;
+                h1{
+                    color:#fff;
+                }
+                .post-categories a{
+                    color:#fff;
+                    &:hover{
+                        color:#e93f60;
+                    }
+                }
+            }
+            .contact-bar{
+                border-color: #fff;
+                a{
+                    color: #fff;
+                    &.sq{
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+        #artist-profile{
+            p{
+                text-align: justify;
+            }
+            img{
+                width: 18rem;
+            }
+        }
+    }
+
+}
+@media only screen and (min-width:1024px) {
+	.single-post .wrapper{
+		width: 70%;
+	}
+    blockquote{
+        max-width: 70%;
+    }
+    .single{
+        .post-title{
+            font-size: 5rem;
+            width:50%;
+        }
+        &-artist{
+            #hero{
+                .mobile{
+                    img{
+                        display: block;
+                    }
+                }
+            }
+            #artist-profile{
+                p{
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+}

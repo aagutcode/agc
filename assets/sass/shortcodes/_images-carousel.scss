@@ -1,0 +1,54 @@
+.agc-images-carousel{
+    .gallery-title{
+        font-family: 'Montserrat';
+        font-size: .7rem;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+        margin:2.5rem 5%;
+    }    
+    .img-carousel{
+        height: 250px;
+        .owl-dots{
+            display: none;
+        }
+    }
+    .swiper-container{
+        position: relative;  
+        margin-bottom: 5rem;      
+        .swiper-slide {
+            text-align: center;
+            width: auto;
+            img{
+                width: auto;
+                height: 250px;
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev{
+        opacity: .5;
+        transition: .3s;
+        &:hover{
+            opacity: 1;
+        }
+        &:after{
+            color:#fff;
+        }
+    }
+}
+@media only screen and (min-width:992px) {
+    .agc-images-carousel{
+        .gallery-title{
+            font-size: 1rem;
+        }    
+        .img-carousel{
+            height: 540px;
+        }
+        .swiper-container{       
+            .swiper-slide {
+                img{
+                    height: 540px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.widget{
+    img{
+        display: inline-block;
+        margin: 0 0 .75rem;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 900;
+        padding-bottom:1rem;
+        text-transform: uppercase;
+        position: relative;
+        color:#3a3a3a;
+    }
+    p, li{
+        font-size: 1rem;
+    }
+    form{
+        p{
+            margin-bottom:.5rem;
+        }
+        br{
+            display: none;
+        }
+    }
+}
+#polylang-2{
+    ul{
+        margin: 0;
+        list-style:none;
+        li{
+            font-size: .8rem;
+            text-transform: uppercase;
+            img, span{
+                display: inline-block;
+                vertical-align: middle;
+                height:1.2rem;
+            }
+        }
+    }
+    
+}
+.widget_nav_menu{
+    ul{
+        list-style: none;
+        padding: 0;
+        margin:0;
+        li{
+            margin-bottom:.5rem;
+            a{
+                color: #000;
+                font-size: 1rem;
+                &:hover{
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:992px){
+    .widget{
+        margin-bottom: 0;
+    }
+}

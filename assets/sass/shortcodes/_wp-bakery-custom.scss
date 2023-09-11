@@ -1,0 +1,36 @@
+.vc_toggle{
+    margin-bottom: 1.5rem !important;
+    .vc_toggle_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0 !important;
+        h4{
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .vc_toggle_icon{
+            position: inherit !important;
+            transform: unset !important;
+        }
+    }
+    .vc_toggle_content{
+        padding-left: 0 !important;
+        color: #fff;
+    }
+}
+@media only screen and (min-width:992px) {
+    .vc_toggle{
+        .vc_toggle_title{
+            pointer-events: none;
+            .vc_toggle_icon{
+                display: none;
+            }
+        }
+        .vc_toggle_content{
+            display: block !important;
+        }
+    }
+}

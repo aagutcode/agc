@@ -1,0 +1,69 @@
+.agc-team-member{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    .picture{
+        img{
+            width: 11.8rem;
+            height: 18.3rem;
+            object-fit: cover;
+        }
+    }
+    .info{
+        .content{
+            width: 14.5rem;
+            margin-left: 2rem;
+            h3{
+                font-size: 1rem;
+                color: #fff;
+            }
+            h4{
+                font-size: .5rem;
+                letter-spacing: .5em;
+                color: #EBE55E;
+                margin-bottom: 1.4rem;
+            }
+            p{
+                color:#EBEBEB;
+                font-size: .95rem;
+                font-weight: 300;
+            }
+            .social-media{
+                a{
+                    opacity: .85;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (orientation: portrait) {
+    .agc-team-member{
+        flex-direction: column;
+        align-items: center;
+        .picture{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .info{
+            .content{
+                width: 100%;
+                margin: 2rem 0;
+                h3{
+                    font-size: 1.5rem;
+                }
+                h4{
+                    font-size: .75rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.agc-gallery-banner{
+	height: 100vh;
+	width: 100%;
+	padding-top: 16vh;
+	position: relative;
+    .square{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50vw;
+        height: 40.2vh;
+        background-color: #E93F60;
+    }
+    .gallery{
+        position: relative;
+        width: 37.5vh;
+        height: 66.7vh;
+        margin: 0 auto;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: opacity .5s ease-in;
+            will-change: opacity;
+            & + img{
+                opacity: 0;
+            }
+        }
+    }
+    .heading{
+        position: absolute;
+        width: 55vw;
+        left: 6.5vw;
+        bottom: 11vw;
+        z-index: 99;
+        mix-blend-mode: difference;
+        padding-top: 0;
+        h2{
+            font-family: 'Italiana';
+            font-size: 5rem;
+            color: #fff;
+            line-height: 1;
+            font-weight: normal;
+            margin: 0;
+            padding:2rem 0;
+        }
+    }
+}
+@media only screen and (min-width:992px) {
+    .agc-gallery-banner{
+		height: 100vh;
+		padding-top: 0;
+        .gallery{
+            width:74vh;
+            height: 100vh;
+            margin-left: 50%;
+        }
+        .heading{
+            width: 40vw;
+            h2{
+                font-size: 6.5rem;
+            }
+        }
+        .square{
+            width: 40vw;
+            height: 50vh;
+        }
+	}
+}

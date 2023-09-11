@@ -1,0 +1,195 @@
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%;
+	z-index: 101;
+    transition: .3s;
+    &.blur{
+        backdrop-filter: blur(3px);
+    }
+    &.white{
+        .search-bar{
+            .search-input{
+                &::placeholder{
+                    color:#fff;
+                }
+            }
+        }
+    }
+    /* logo */
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        a{
+            display: inline-block;
+            text-align: center;
+            line-height: 1;
+        }
+        .logo-img, img {
+            width: 4.5rem;
+            height: auto;
+        }
+    }
+    .search-bar{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        .search-submit{
+            display: none;
+        }
+        .search-input{
+            font-family: 'Montserrat','Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: .75rem;
+            letter-spacing: .1rem;
+            border: none;
+            border-radius: 0;
+            outline: none !important;
+            box-shadow: none !important;
+            text-align: center;
+            font-weight: bold;
+            background: transparent;
+            margin: 0;
+            &::placeholder{
+                color: #000;
+            }
+        }
+    }
+    nav{
+        ul{
+            list-style: none;
+            font-size: 0;
+            margin:0;
+            padding: 0 1rem 0 0;
+            li{
+                display: inline-block;
+                padding: 0 .65rem;
+                font-size: 0;
+                margin-bottom: 0;
+                a{
+                    text-transform: uppercase;
+                    font-family: 'TradeGothic LT Extended';
+                    color: #EBEBEB;
+                    font-size: .8rem;
+                    letter-spacing: .715em;
+                    &.mPS2id-highlight-last, &:hover{
+                        color:$secondary-color;
+                    }
+                }
+            }
+            &#menu-language{
+                padding: 0;
+                li{
+                    position: relative;
+                    &:not(:last-of-type):after{
+                        content: '/';
+                        position: absolute;
+                        font-size: .8rem;
+                        color: #EBEBEB;
+                        right: 0;
+                        top: 0;
+                    }
+                    &.current-lang{
+                        a{
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
+}
+/* nav */
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    transition: all .375s;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 24rem;
+        height: 24rem;
+        top: 8rem;
+        right: 2.3rem;
+        background: #E2F4F7;
+        transform-origin: 0 0;
+        transition: all .275s .1s;
+        z-index: -1;
+    }    
+    ul {
+        display: inline-flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin: 0;
+        padding: 2.3rem;
+        li {
+            display: block;
+            margin: .5rem 0;
+            text-align: left;
+            &.current-menu-item a{
+                color: #E93F60;
+            }
+        }
+        a {
+            display: inline-block;
+            font-family: 'Italiana';
+            font-size: 5rem;
+            text-transform: lowercase;
+        }
+    }
+    .social-media-links{
+        display: flex;
+        padding:0 2.3rem;
+        a{
+            font-size: 2rem;
+            margin-right: 3rem;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .nav {
+        ul{
+            padding: 2.3rem 5rem;
+        }
+        .social-media-links{
+            padding: 0 5rem;
+        }
+    }
+    .header{
+        position: fixed;
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: .4rem;
+                    }
+                }
+                &#menu-language{
+                    li{
+                        &:not(:last-of-type):after{
+                            font-size: .4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.agc-scroll-carousel{
+	top: 20vh;
+    overflow: visible;
+    overflow-x: hidden!important;
+    z-index: 9;
+    .carousel > .vc_column-inner > .wpb_wrapper{
+        position: absolute;
+        height: 60vh;
+        top: 0;
+        left: 200vw;
+        width: 292vw;
+        z-index: 9;
+        display: flex;
+    }
+}

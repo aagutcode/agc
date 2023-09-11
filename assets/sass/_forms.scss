@@ -1,0 +1,78 @@
+form{
+    label{
+        display: block;
+        line-height: 1;
+        margin-top:1rem;
+        font-size: .85rem;
+        span{
+            display: block;
+        }
+    }
+    br{
+        display: none;;
+    }
+    input,
+    textarea,
+    select{
+        width:100%;
+        padding: 0 1rem;
+        border: none;
+        margin-top: 1rem;
+        margin-bottom:0;
+        font-size: .85rem;
+        line-height: 2.4rem;
+        background:#E5E5E6;
+        border-radius: .15rem;
+        &:focus{
+            box-shadow: 0 1px 5px rgba($color: #000000, $alpha: 0.1);
+            outline: none;
+        }
+    }
+    input,
+    select{
+        height: 2.4rem;
+    }
+    input[type=date]{
+        padding:.41rem .75rem;
+    }
+    select{
+        padding:.45rem .75rem;
+    }
+    textarea{
+        height:12rem;
+        resize: none;
+    }
+    input[type=submit]{
+        width:auto;
+        padding:0;
+        width: 8.5rem;
+        font-weight: 300;
+        background: $primary-color;
+        color:#fff;
+        transition:.3s;
+        border:none;
+        &:hover{
+            background:#EBE55E;
+            color: #1F2224;
+        }
+    }
+    p{
+        color:#fff;
+        font-size: 1rem;
+    }
+}
+.wpcf7-form{
+    text-align: center;
+    .wpcf7-response-output{
+        display: inline-block;
+        padding: 0.5rem 1rem !important;
+        margin-top: 0 !important;
+    }
+    .ajax-loader{
+        display: block;
+        margin:0 auto;
+    }
+    .wpcf7-spinner{
+        display: none;
+    }
+}

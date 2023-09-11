@@ -1,0 +1,76 @@
+.agc-slider{    
+    .slide{
+        position: relative;
+        width:100%;
+        overflow: hidden;
+        .image-bg-layer{
+            width: 100%;
+            height:120vw;
+            img{
+                width: 100%;
+                height:100%;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+        }
+        .cta-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            &.true{
+                background-color: linear-gradient(rgba(55, 55, 55, 0.62),rgba(55, 55, 55, 0.62),#202020);
+            }
+            h1{
+                font-size:4rem;
+                font-weight: normal;
+                display: inline-block;
+                padding: 0;
+                border-radius: 3px;
+                font-family: 'allura';    
+                text-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.07);
+            }
+            h2{
+                font-size:1.5rem;
+                letter-spacing: 0.2em;
+                padding: 0;
+                text-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.07);
+            }
+            p{
+                font-size:1.1rem;
+                font-weight: 500;
+                text-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.07);
+                padding: 0;
+                margin:0;
+            }
+        }
+        .cta-content{
+            padding:0 1rem;
+            width: 95%;
+            max-width:768px;
+        }
+    }
+}
+@media only screen and (min-width:992px) {
+    .agc-slider{
+        .slide{
+            .cta-overlay{
+                padding:0 10%;
+                justify-content: flex-end;
+                text-align: left;
+            }
+            .cta-content{
+                width: 40%;
+            }
+            .image-bg-layer{
+                width: 100%;
+                height:calc(100vh - 6rem);
+            }
+        }
+    }
+}

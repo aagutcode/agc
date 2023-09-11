@@ -1,0 +1,40 @@
+.agc-services{
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    .service-item{
+        display: block;
+        font-size: 0;
+        .service-title{
+            overflow: hidden;
+            h2{
+                color: #fff;
+                font-weight: 300;
+                display: inline-block;
+                cursor: pointer;
+                transition: .3s;
+                scale: .95;
+                &:hover{
+                    color:#7c9d3a;
+                    scale: 1;
+                }
+            }
+        }
+        p{
+            color:#7c9d3a;
+            display: inline-block;
+            max-height: 0;
+            margin-bottom: 0;
+            opacity:0;
+            overflow: hidden;
+            transition: 1s ease-in-out;
+        }
+        &.show-details{
+            p{
+                max-height: 10rem;
+                margin-bottom: 1rem;
+                opacity:1;
+            }
+        }
+    }
+}

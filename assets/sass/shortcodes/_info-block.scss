@@ -1,0 +1,33 @@
+.agc-info-block{
+    max-width: 100%;
+    width: 28rem;
+    height: 28.1rem;
+    padding:2.3rem 2.05rem;
+    h3{
+        width: 9rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+    h2{
+        font-family: 'Halyard Display Light';
+        font-size: 3.2rem;
+        line-height: .9;
+        width: 20.5rem;
+        margin:1.9rem 0 2rem;
+    }
+    img{
+        width:10rem;
+        height:auto;
+    }
+    &.special{
+        h2{
+            margin-bottom:1rem;
+        }
+    }
+}
+@media only screen and (min-width:992px) {
+    .agc-info-block{
+        margin: calc((50vw - 28rem)/2);
+    }
+}

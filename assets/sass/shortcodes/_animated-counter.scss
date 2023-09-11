@@ -1,0 +1,42 @@
+.agc-animated-counter{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24rem;
+    max-width: 100%;
+    margin-bottom: 2.4rem;
+    .counter{
+        background: url('../img/metrics-phone-background.webp') no-repeat center center;
+        background-size: contain;
+        font-size: 4.5rem;
+        font-family: 'Fixture Condensed';
+        width: 6.9rem;
+        height: 14rem;
+        line-height: 13rem;
+        text-align: center;
+        letter-spacing: -0.02rem;
+        &:after{
+            content: '%';
+            font-size: 1.5rem;
+        }
+    }
+    .counter-title{
+        width: 9.5rem;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.4;
+        letter-spacing: -0.02rem;
+        margin:0;
+        margin: 0 1.8rem;
+    }
+}
+@media (orientation: portrait) {
+    .agc-animated-counter{
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            .counter-title{
+                text-align: right;
+            }
+        }        
+    }
+}
