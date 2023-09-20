@@ -49,6 +49,10 @@ include __DIR__.'/shortcodes/agc-images-carousel.php';
 /*----------------------------------*/
 include __DIR__.'/shortcodes/agc-images-marquee.php';
 /*----------------------------------*\
+    Locations
+/*----------------------------------*/
+include __DIR__.'/shortcodes/agc-locations.php';
+/*----------------------------------*\
     Logo Gallery
 /*----------------------------------*/
 include __DIR__.'/shortcodes/agc-logo-gallery.php';

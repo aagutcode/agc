@@ -106,24 +106,26 @@ function agutcode_header_scripts()
 // Load AGUTCODE conditional scripts
 function agutcode_conditional_scripts()
 {
-    if (is_single()) {
-        wp_register_script('lightbox', get_template_directory_uri() . '/assets/js/lightbox.js'); // Conditional script(s)
-        wp_enqueue_script('lightbox'); // Enqueue it!
-        
+    if (is_front_page()) {       
+        wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAOJqdLfEmCW2hg8K-TZjhgvNjuG2WAcHM&callback=initMap'); // Conditional script(s)
+        wp_enqueue_script('google-maps'); 
     }
 }
+
 
 // Load AGUTCODE styles
 function agutcode_styles(){
     if(!is_admin()){
         wp_register_style('agutcode', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all');
-        wp_enqueue_style('agutcode'); // Enqueue it!
+        wp_enqueue_style('agutcode'); 
         wp_register_style('magic-mouse', get_template_directory_uri() . '/assets/css/magic-mouse.css', array(), '1.0', 'all');
-        wp_enqueue_style('magic-mouse'); // Enqueue it!
+        wp_enqueue_style('magic-mouse'); 
         wp_register_style('owl', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), '1.0', 'all');
-        wp_enqueue_style('owl'); // Enqueue it!
-        wp_register_style('smooth', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css', array(), '1.0', 'all');
-        wp_enqueue_style('smooth'); // Enqueue it!
+        wp_enqueue_style('owl'); 
+    }
+    if(is_admin()){
+        wp_register_style('agutcode-admin', get_template_directory_uri() . '/assets/css/admin.css', array(), '1.0', 'all');
+        wp_enqueue_style('agutcode-admin'); 
     }
 }
 
@@ -133,6 +135,7 @@ function register_agutcode_menu()
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'agutcode'), // Main Navigation
         'sidebar-menu' => __('Sidebar Menu', 'agutcode'), // Sidebar Navigation
+        'footer-menu' => __('Footer Menu', 'agutcode'), // Footer Navigation
         'extra-menu' => __('Extra Menu', 'agutcode') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }

@@ -1,13 +1,20 @@
-		<section class="prefooter py-5">
+		<section class="prefooter">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 text-start">
+					<div class="col-lg-3 text-start">
+						<div class="logo">
+							<?php if ( function_exists( 'the_custom_logo' ) ) {
+								the_custom_logo();
+							} ?>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center text-lg-start">
 						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-widgets-1')) ?>
 					</div>
-					<div class="col-lg-4 text-center">
+					<div class="col-lg-3 text-center text-lg-start">
 						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-widgets-2')) ?>
 					</div>
-					<div class="col-lg-4 text-end">
+					<div class="col-lg-3 text-center text-lg-start">
 						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-widgets-3')) ?>
 					</div>
 				</div>
@@ -15,15 +22,12 @@
 		</section>
 		<footer class="footer" role="contentinfo">
 				<div class="container">
-					<div class="row p-3 align-items-center">
-						<div class="col-lg-4">
-							<p class="my-2 my-lg-0">&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>.</p>
+					<div class="row align-items-center">
+						<div class="col-lg-9 text-center text-lg-start">
+							<?php agutcode_nav('footer-menu'); ?>
 						</div>
-						<div class="col-lg-4 text-center">
-							<p class="my-2 my-lg-0">info@trama.la</p>
-						</div>
-						<div class="col-lg-4 text-lg-end">
-							<p class="my-2 my-lg-0"><a href="https://www.linkedin.com/company/tramaexecutivesearch/" target="_blank">Linkedin</a></p>							
+						<div class="col-lg-3 text-center text-lg-start">
+							<p class="my-2 my-lg-0">&copy; <?php echo date('Y'); ?>. <?php bloginfo('name'); ?>. All rights reserved.</p>
 						</div>
 					</div>
 				</div>

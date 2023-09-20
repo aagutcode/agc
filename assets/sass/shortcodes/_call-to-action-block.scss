@@ -67,7 +67,6 @@ $screen-height: 100vh;
         }
         h2{
             font-size:2rem;
-            font-weight: 300;
         }
         p{
             font-size:1rem;
@@ -80,7 +79,6 @@ $screen-height: 100vh;
 @media only screen and (min-width:992px) {
 	.agc-cta-block{
         .cta-content{
-            width: 30rem;
             padding:0;
         }
     } 	

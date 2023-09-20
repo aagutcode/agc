@@ -1,0 +1,65 @@
+.barlow{
+    font-family: 'Barlow', sans-serif;
+}
+.font-weight-medium{
+    font-weight: 500;
+}
+.header{
+    font-family: 'Barlow', sans-serif;
+}
+.agc-cta-block{
+    .cta-overlay{
+        align-items: end;
+        padding-bottom: 3rem;
+        h2{
+            font-size:5.5rem;
+        }
+        
+    }
+}
+.wpb_text_column{
+    p{
+        a{
+            color: #000;
+            text-decoration: underline !important;
+            font-weight: bold;
+        }
+    } 
+    &.large-text p{
+        font-size: 1.8rem;
+    }
+} 
+.widget_nav_menu {
+    width: 50%;
+    display: inline-block;
+}
+.gas-station-icon img{
+    width: 4.65rem;
+    height: auto;
+}
+.absolute-logo{
+    position: absolute;
+    top: 4rem;
+    right: 5.75rem;
+    margin: 0;
+    img{
+        width: 13.25rem;
+    }
+}
+.half-wrapper{
+	.vc_column-inner {
+		padding: 0 !important;
+		margin: 0 auto;
+		width: 90%;
+	}
+	&.home{
+		.vc_column-inner {
+			max-width: 25.9rem;
+		}
+	}
+	&.about{
+		.vc_column-inner {
+			max-width: 27.5rem;
+		}
+	}
+}

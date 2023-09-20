@@ -5,7 +5,11 @@
  *  Shortcodes, and map to WPBakery functions.
  */
 /*----------------------------------*\
-    Call To Action Block
+    Header Type
 /*----------------------------------*/
-include __DIR__.'/shortcodes/agc-gallery-metabox.php';
+include __DIR__.'/metaboxes/header-type.php';
+/*----------------------------------*\
+    Sucursales
+/*----------------------------------*/
+include __DIR__.'/metaboxes/sucursales.php';
 ?>

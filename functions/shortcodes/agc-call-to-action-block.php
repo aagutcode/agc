@@ -27,11 +27,11 @@ function cta_block_callback($attr){
 
     $mobile_img_url = wp_get_attachment_image_src($params["mobile_image"],'large');
     
-    $mobile_img_tag = !empty($mobile_img_url[0]) ? '<img src="'.$mobile_img_url[0].'" alt="'.$params['title'].'" class="d-lg-none">' : '';
+    $mobile_img_tag = !empty($mobile_img_url[0]) ? '<img src="'.$mobile_img_url[0].'" alt="'.$params['title1'].' '.$params['title2'].'" class="d-lg-none">' : '';
 
     $img_tag_class = !empty($mobile_img_tag) ? 'class="d-none d-lg-block"' : '';
 
-    $img_tag = !empty($img_url[0]) ? '<img src="'.$img_url[0].'" alt="'.$params['title'].'" '.$img_tag_class.'>' : '';
+    $img_tag = !empty($img_url[0]) ? '<img src="'.$img_url[0].'" alt="'.$params['title1'].' '.$params['title2'].'" '.$img_tag_class.'>' : '';
 
     $bgcolor = !empty($params['bgcolor']) ? 'style="background-color:'.$params['bgcolor'].'"' : '';
 

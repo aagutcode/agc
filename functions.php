@@ -14,6 +14,9 @@ include 'functions/core-functions.php';
 /*----------------------------------*/
 include 'functions/cpt.php';
 /*----------------------------------*\
+    Metaboxes functions
+/*----------------------------------*/
+include 'functions/metaboxes.php';
 /*----------------------------------*\
     VC functions
 /*----------------------------------*/

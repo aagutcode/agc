@@ -2,7 +2,7 @@
 function slider_callback( $atts, $content = null ) {  
     $params = shortcode_atts( array(
             'el_class'    => '',
-            'id'       => ''
+            'id'       => 'temporal'
         ), $atts);
     $carrusel = '';
     $id = $params['id'] != '' ? $params['id'] : 'carrusel-'.mt_rand(100,999);
@@ -10,22 +10,6 @@ function slider_callback( $atts, $content = null ) {
       $carrusel = '<div id="'.$id.'" class="agc-slider owl-carousel img-carousel">';
       $carrusel .= do_shortcode($content); 
       $carrusel .= '</div>';  
-      $carrusel .= '<script>
-      jQuery(document).ready(function($){
-        $("#'.$id.'").owlCarousel({
-        loop:true,
-        nav:false,
-        dots:false,
-        margin:0,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
-            }
-        }
-      })
-    })
-    </script>';     
     }
     return $carrusel;
 }
@@ -65,6 +49,7 @@ add_action( 'vc_before_init', 'create_vc_slider' );
 //Nested Slide Shortcode
 function slide_callback( $atts ) {  
   $params = shortcode_atts(array(
+    'video' => '',
     'image' => '',
     'mobile_image' => '',
     'bg-color' => '',
@@ -112,10 +97,17 @@ function slide_callback( $atts ) {
 
   //Slide structure
   $slide = '
-  <div class="slide '.$params['class'].'" '.$bgcolor.'>  
-    <div class="image-bg-layer">
+  <div class="slide '.$params['class'].'" '.$bgcolor.'>';
+  $slide .= $params['video'] 
+  ? 
+    '<div class="video-bg-layer">
+      <video role="presentation" preload="auto" loop="" muted="" class="background-video" autoplay="" src="'.wp_get_attachment_url($params["video"]).'"></video>
+    </div>' 
+  : 
+    '<div class="image-bg-layer">
       '.$img_tag.$mobile_img_tag.'
-    </div>
+    </div>' ;
+  $slide .= '
     <div class="cta-overlay '.$params['overlay'].'">
       <div class="cta-content">
       '.$title1.'
@@ -139,7 +131,14 @@ function create_vc_slide() {
     "icon" => "vc_icon-vc-hoverbox",
     "show_settings_on_create" => true,
     "as_child" => array('only' => 'slider'), 
-    "params" => array(        
+    "params" => array(
+      array(
+        'type' => 'file_picker',
+        'class' => '',
+        'heading' => __( 'Background Video', 'js_composer' ),
+        'param_name' => 'video',
+        'value' => '',
+      ),
       array(
         "type" => "attach_image",
         "heading" => __("Background Image (Desktop)", "agutcode"),
